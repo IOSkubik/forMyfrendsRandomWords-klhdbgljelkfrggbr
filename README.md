@@ -4,9 +4,9 @@
 для добавления сервака, качаем себе на комп файл с кофигами, добавляем ваш новый конфиг с новой строки, 
 запускаем powershell(win+x - powershell от администратора) в него вставляем - 
 
-$content = Get-Content (указать без скобок путь до файла с конфигами)\vpn_configs.txt -Raw
+$content = Get-Content (указать без скобок путь до файла с конфигами, к примеру c:\vpn_config.txt )\vpn_configs.txt -Raw
 $base64 = [Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes($content))
-Set-Content (указать путь где сохранить)vpnall.txt $base64
+Set-Content (указать путь где сохранить)\vpnall.txt $base64
 
 Далее два варианта: 
 а)либо тут удалить текущии версии файлов, после залить новые вами правленые 
